@@ -12,7 +12,7 @@
    </head>
    
    <body>
-       <!--// Mini Header \\-->
+       
        <div class="wm-mini-header">
             <span class="wm-blue-transparent"></span>
              <div class="container">
@@ -25,14 +25,14 @@
                 </div>
             </div>    
         </div>
-        <!--// Mini Header \\-->
+        
         
 
       <div id = "container" style = "width: 1800px; height: 1000px; margin: 0 auto">
       </div>
       <script language = "JavaScript">
          function drawChart() {
-            // Define the chart to be drawn.
+           
             var data = google.visualization.arrayToDataTable([
                ['Lat', 'Long', 'Name'],
                [{{ $latitude }} ,{{ $longitude }},'1 hour before:{{ $zone }}'],
@@ -40,10 +40,10 @@
                [{{ $latitude1 }}, {{ $longitude1 }}, '1 hour after:{{ $zone1 }}']
             ]);
               
-            // Set chart options
+            
             var options = {showTip: true};
 
-            // Instantiate and draw the chart.
+            
             var chart = new google.visualization.Map(document.getElementById
             ('container'));
             chart.draw(data, options);
@@ -51,7 +51,10 @@
          google.charts.setOnLoadCallback(drawChart);
       </script>
 
-      <!--// Mini Header \\-->
+
+<br>
+<br>
+      
       <div class="wm-mini-header">
             <span class="wm-blue-transparent"></span>
              <div class="container">
@@ -103,7 +106,7 @@
                     </div>
                 </div>
             </div>
-        <!--// Mini Header \\-->
+        
         <button type="button" onclick="alert('Retry?')"><a href="/home">Home</a></button>
    </body>
 </html>
